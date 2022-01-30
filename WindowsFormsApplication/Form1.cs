@@ -188,5 +188,20 @@ namespace WindowsFormsApplication
         {
             this.button3.Text = this.dateTimePicker1.Value.ToShortDateString();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Get the data.
+            string text = this.label1.Text;
+
+            // Create and launch the form.
+            Form2 form = new Form2();
+            // Set the data.
+            form.label1.Text = text;
+            // Use two forms together.
+            form.Show();
+            // Or only one.
+            //form.ShowDialog();
+        }
     }
 }
