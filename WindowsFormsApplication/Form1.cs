@@ -92,6 +92,18 @@ namespace WindowsFormsApplication
             // GroupBox
             // To categorize related controls
             // Similar properties like button.
+
+            // RadioButton
+            // Enables user to select a single option
+            // for a group of choices.
+            // It is not possible to change check false
+            // like checkbox.
+            // Similar properties like button.
+            // CheckAlign
+            // Checked
+
+            // Events
+            // CheckedChanged
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,6 +123,11 @@ namespace WindowsFormsApplication
             // Allow only one decimal point
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
                 e.Handled = true;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Changed");
         }
     }
 }
