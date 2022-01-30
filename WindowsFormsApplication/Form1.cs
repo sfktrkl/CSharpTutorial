@@ -85,7 +85,7 @@ namespace WindowsFormsApplication
             // Multiline
             // PasswordChar
             // ReadOnly
-            
+
             // Events
             // KeyPress
 
@@ -111,6 +111,19 @@ namespace WindowsFormsApplication
             // Events
             // CheckedChanged
             // CheckStateChanged
+
+            // ComboBox
+            // Can hold multiple values at the same time.
+            // To give user multiple selection options.
+            this.comboBox1.Items.Add("Item 4");
+            this.comboBox1.SelectedIndex = 0;
+            // Similar properties like button.
+            // Text property to show a caption.
+            // Sorted
+
+            // Events
+            // SelectedIndexChanged
+            // SelectedValueChanged
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -140,6 +153,16 @@ namespace WindowsFormsApplication
         private void checkBox1_CheckStateChanged(object sender, EventArgs e)
         {
             MessageBox.Show("State Changed");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.comboBox1.SelectedItem.ToString());
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.button2.Text = this.comboBox1.SelectedItem.ToString();
         }
     }
 }
