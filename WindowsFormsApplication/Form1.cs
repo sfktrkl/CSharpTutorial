@@ -124,6 +124,17 @@ namespace WindowsFormsApplication
             // Events
             // SelectedIndexChanged
             // SelectedValueChanged
+
+            // DateTimePicker
+            // To display and collect date and time with specified format.
+            // Similar properties like button.
+            // Format
+            // CustomFormat
+            // MinDate
+            // MaxDate
+
+            // Events
+            // ValueChanged
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -163,6 +174,19 @@ namespace WindowsFormsApplication
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.button2.Text = this.comboBox1.SelectedItem.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DateTime date = this.dateTimePicker1.Value;
+            MessageBox.Show(date.ToString());
+            this.label3.Text = date.AddYears(2).ToShortDateString();
+            this.label4.Text = date.AddYears(-2).ToShortDateString();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            this.button3.Text = this.dateTimePicker1.Value.ToShortDateString();
         }
     }
 }
