@@ -128,5 +128,29 @@ namespace ConsoleApplication
             Console.WriteLine(a.ToString());
         }
 
+        #region Region
+        // Region directive partitions the code
+        // To organize the code blocks.
+        #endregion
+
+        // Naming Conventions
+        // Important to identify the usage and the 
+        // purpose of a class or of a method to
+        // identify the type of variable and arguments.
+        // Pascal Casing, class and method names
+        // SomeClass, DoIt
+        // Camel Casing, arguments and local variables
+        // inputValue, phoneNumber
+        // For form elements,
+        // Form - Frm
+        // Label - lbl
+        // Button - btn
+        // TextBox - txt
+        // ComboBox - cmb
+        // CheckBox - ch
+        // RadioButton - rb
+        // DateTimePicker - dp
+        // GroupBox - gb
+
     }
 }
