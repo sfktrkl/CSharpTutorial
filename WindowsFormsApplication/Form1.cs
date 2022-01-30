@@ -47,6 +47,37 @@ namespace WindowsFormsApplication
             DialogResult result = MessageBox.Show(messageText, messageTitle, messageButtons, messageIcon);
             if (result == DialogResult.Yes)
                 this.Close();
+
+            // Button
+            // Enables users to communicate with an application.
+
+            // Properties
+            // Name
+            // BackColor
+            // ForeColor
+            // Font
+            // Image
+            // ImageAlign
+            // Text
+            // TextAlign
+            // Enabled
+            // Visible
+            // Anchor
+            // Dock
+            // Location
+            // Size
+            // MaximumSize
+            // MinimumSize
+            // TabIndex
+
+            // Events
+            // Click
+            // KeyPress
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello");
         }
     }
 }
