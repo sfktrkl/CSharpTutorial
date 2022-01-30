@@ -77,6 +77,17 @@ namespace WindowsFormsApplication
             // Label
             // To display text and information
             // Similar properties like button.
+
+            // Textbox
+            // To get input from users.
+            // For bigger paragraphs use RichTextBox.
+            // Similar properties like button.
+            // Multiline
+            // PasswordChar
+            // ReadOnly
+            
+            // Events
+            // KeyPress
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +95,18 @@ namespace WindowsFormsApplication
             MessageBox.Show("Hello");
             this.label1.Text = "Changed";
             this.label1.BackColor = Color.Red;
+            this.label1.Text = this.textBox1.Text;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Only allow digits and '.'
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
+
+            // Allow only one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+                e.Handled = true;
         }
     }
 }
