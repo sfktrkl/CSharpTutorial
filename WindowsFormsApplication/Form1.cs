@@ -35,6 +35,18 @@ namespace WindowsFormsApplication
             // Events
             // Load
             // Click
+
+            // MessageBox
+            // To display a message with given text and action buttons.
+            string messageTitle = "Launch";
+            string messageText = "Close";
+            // Can have different buttons to display
+            MessageBoxButtons messageButtons = MessageBoxButtons.YesNo;
+            // Can have an icon
+            MessageBoxIcon messageIcon = MessageBoxIcon.Information;
+            DialogResult result = MessageBox.Show(messageText, messageTitle, messageButtons, messageIcon);
+            if (result == DialogResult.Yes)
+                this.Close();
         }
     }
 }
