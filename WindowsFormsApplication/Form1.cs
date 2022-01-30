@@ -16,5 +16,25 @@ namespace WindowsFormsApplication
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Most used Properties
+            // BackColor
+            // BackgroundImage
+            // Font
+            // FormBorderStyle
+            // Text
+            // Name
+            // Size
+            // StartPosition
+            // Icon
+            // MaximizeBox
+            // MinimizeBox
+
+            // Events
+            // Load
+            // Click
+        }
     }
 }
