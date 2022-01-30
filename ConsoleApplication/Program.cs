@@ -15,7 +15,9 @@ namespace ConsoleApplication
             // Type Conversions in Variables
             //Lesson13();
             // Operators
-            Lesson27();
+            //Lesson27();
+            // If-Else Statement
+            Lesson33();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -152,5 +154,29 @@ namespace ConsoleApplication
         // DateTimePicker - dp
         // GroupBox - gb
 
+        // If-Else Statement
+        static void Lesson33()
+        {
+            int a = 20, b = 30;
+            bool condition = true;
+            if (a == 20)
+                Console.WriteLine("A is 20");
+            if (!condition)
+                Console.WriteLine("Condition is false");
+            if (a <= b)
+                Console.WriteLine("A is smaller than B");
+
+            if (a == 30)
+                Console.WriteLine("A is 30");
+            else if (condition)
+                Console.WriteLine("Condition is true");
+            else if (a >= b)
+                Console.WriteLine("A is bigger than B");
+            else
+                Console.WriteLine("None");
+
+            Console.WriteLine(a < b ? a.ToString() : b.ToString());
+
+        }
     }
 }
