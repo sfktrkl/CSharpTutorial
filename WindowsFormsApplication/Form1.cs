@@ -104,6 +104,13 @@ namespace WindowsFormsApplication
 
             // Events
             // CheckedChanged
+
+            // CheckBox
+            // Similar properties like radiobutton.
+
+            // Events
+            // CheckedChanged
+            // CheckStateChanged
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -128,6 +135,11 @@ namespace WindowsFormsApplication
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Changed");
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("State Changed");
         }
     }
 }
