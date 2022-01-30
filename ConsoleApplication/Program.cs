@@ -13,7 +13,9 @@ namespace ConsoleApplication
             // What Is Variables in C# ?
             //Lesson12()
             // Type Conversions in Variables
-            Lesson13();
+            //Lesson13();
+            // Operators
+            Lesson27();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -98,6 +100,32 @@ namespace ConsoleApplication
             char c = '+';
             string s = x.ToString() + n.ToString() + o.ToString() + c.ToString();
             Console.WriteLine(s);
+        }
+
+        // Operators
+        // To perform specific mathematical or logical manipulations.
+        static void Lesson27()
+        {
+            // Arithmetic Operators
+            // +, -, *, /, %, %, ++, --
+            Console.WriteLine((5 + 10).ToString());
+            Console.WriteLine(("a" + "5").ToString());
+
+            // Relational Operators
+            // ==, !=, <, >, <=, >=
+            Console.WriteLine((5 == 10).ToString());
+            Console.WriteLine((5 > 10).ToString());
+
+            // Logical Operators
+            // &&, ||
+            Console.WriteLine((true && false).ToString());
+            Console.WriteLine((true || false).ToString());
+
+            // Assignment Operators
+            // +=, -=, *=, /=, %=
+            int a = 5;
+            a *= a;
+            Console.WriteLine(a.ToString());
         }
 
     }
