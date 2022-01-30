@@ -17,7 +17,9 @@ namespace ConsoleApplication
             // Operators
             //Lesson27();
             // If-Else Statement
-            Lesson33();
+            //Lesson33();
+            // Switch Case Statement
+            Lesson34();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -177,6 +179,39 @@ namespace ConsoleApplication
 
             Console.WriteLine(a < b ? a.ToString() : b.ToString());
 
+        }
+
+        // Switch Case Statement
+        static void Lesson34()
+        {
+            int x = 5;
+            bool y = true;
+            string message = "";
+            switch (x)
+            {
+                case 2:
+                    message = "low";
+                    break;
+                case 5:
+                    message = "high";
+                    switch (y)
+                    {
+                        case true:
+                            message += " true";
+                            break;
+                        default:
+                            message += " false";
+                            break;
+                    }
+                    break;
+                case 10:
+                    message = "very high";
+                    break;
+                default:
+                    message = "none";
+                    break;
+            }
+            Console.WriteLine(message);
         }
     }
 }
