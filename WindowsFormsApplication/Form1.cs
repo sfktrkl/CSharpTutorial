@@ -73,11 +73,17 @@ namespace WindowsFormsApplication
             // Events
             // Click
             // KeyPress
+
+            // Label
+            // To display text and information
+            // Similar properties like button.
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello");
+            this.label1.Text = "Changed";
+            this.label1.BackColor = Color.Red;
         }
     }
 }
