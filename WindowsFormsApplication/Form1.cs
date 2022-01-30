@@ -88,6 +88,10 @@ namespace WindowsFormsApplication
             
             // Events
             // KeyPress
+
+            // GroupBox
+            // To categorize related controls
+            // Similar properties like button.
         }
 
         private void button1_Click(object sender, EventArgs e)
