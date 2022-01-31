@@ -19,7 +19,9 @@ namespace ConsoleApplication
             // If-Else Statement
             //Lesson33();
             // Switch Case Statement
-            Lesson34();
+            //Lesson34();
+            // While, DoWhile
+            Lesson35();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -212,6 +214,23 @@ namespace ConsoleApplication
                     break;
             }
             Console.WriteLine(message);
+        }
+
+        // While, DoWhile
+        static void Lesson35()
+        {
+            int loop = 0;
+            while (loop < 10)
+            {
+                Console.WriteLine(loop);
+                loop++;
+            }
+            loop = 0;
+            do
+            {
+                Console.WriteLine(loop);
+                loop++;
+            } while (loop < 10);
         }
     }
 }
