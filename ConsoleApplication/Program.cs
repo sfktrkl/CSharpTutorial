@@ -21,7 +21,9 @@ namespace ConsoleApplication
             // Switch Case Statement
             //Lesson34();
             // While, DoWhile
-            Lesson35();
+            //Lesson35();
+            // For loop
+            Lesson36();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -231,6 +233,17 @@ namespace ConsoleApplication
                 Console.WriteLine(loop);
                 loop++;
             } while (loop < 10);
+        }
+
+        // For loop
+        static void Lesson36()
+        {
+            for (int i = 0; i < 10; i++)
+                Console.WriteLine(i);
+
+            int[] arr = { 0, 1, 2, 3 };
+            foreach (var item in arr)
+                Console.WriteLine(item);
         }
     }
 }
