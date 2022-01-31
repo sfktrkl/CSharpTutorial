@@ -23,7 +23,9 @@ namespace ConsoleApplication
             // While, DoWhile
             //Lesson35();
             // For loop
-            Lesson36();
+            //Lesson36();
+            // Jump statements
+            Lesson37();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -244,6 +246,44 @@ namespace ConsoleApplication
             int[] arr = { 0, 1, 2, 3 };
             foreach (var item in arr)
                 Console.WriteLine(item);
+        }
+
+        // Jump statements
+        static void Lesson37()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 5)
+                    break;
+                Console.WriteLine(i);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 5)
+                    continue;
+                Console.WriteLine(i);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 5)
+                    goto Final;
+                Console.WriteLine(i);
+            }
+
+            Final:
+            int x = 3;
+            switch (x)
+            {
+                case 2:
+                    goto case 3;
+                case 3:
+                    Console.WriteLine(x);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
