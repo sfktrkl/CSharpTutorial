@@ -25,7 +25,9 @@ namespace ConsoleApplication
             // For loop
             //Lesson36();
             // Jump statements
-            Lesson37();
+            //Lesson37();
+            // Arrays
+            Lesson39();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -284,6 +286,15 @@ namespace ConsoleApplication
                 default:
                     break;
             }
+        }
+
+        // Arrays
+        static void Lesson39()
+        {
+            int[] numbers = new int[4];
+            int[] numbers2 = new int[4] { 3, 4, 5, 6 };
+            int[] numbers3 = new int[] { 3, 4, 5, 6 };
+            int[] numbers4 = { 3, 4, 5, 6 };
         }
     }
 }

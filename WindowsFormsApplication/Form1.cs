@@ -203,5 +203,55 @@ namespace WindowsFormsApplication
             // Or only one.
             //form.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string[] days = { "s", "m", "t", "w", "th", "f", "sat" };
+            this.dataGridView1.Columns.Clear();
+            this.dataGridView1.Columns.Add("days", "Days");
+            foreach (string day in days)
+                this.dataGridView1.Rows.Add(day);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string[][] days = {
+                new string[] { "1", "s", },
+                new string[] { "2", "m", },
+                new string[] { "3", "t", },
+                new string[] { "4", "w", },
+                new string[] { "5", "th", },
+                new string[] { "6", "f", },
+                new string[] { "7", "sat", },
+            };
+            this.dataGridView1.Columns.Clear();
+            this.dataGridView1.Columns.Add("number", "Number");
+            this.dataGridView1.Columns.Add("days", "Day");
+            foreach (var day in days)
+                this.dataGridView1.Rows.Add(day);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string[,] days = {
+                { "1", "s", },
+                { "2", "m", },
+                { "3", "t", },
+                { "4", "w", },
+                { "5", "th", },
+                { "6", "f", },
+                { "7", "sat", },
+            };
+            this.dataGridView1.Columns.Clear();
+            this.dataGridView1.Columns.Add("number", "Number");
+            this.dataGridView1.Columns.Add("days", "Day");
+            for (int i = 0; i < days.GetLength(0); i++)
+            {
+                string[] day = new string[days.GetLength(1)];
+                for (int j = 0; j < days.GetLength(1); j++)
+                    day[j] = days[i, j];
+                this.dataGridView1.Rows.Add(day);
+            }
+        }
     }
 }
