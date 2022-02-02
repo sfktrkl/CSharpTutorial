@@ -35,7 +35,9 @@ namespace ConsoleApplication
             // Random
             //Lesson43();
             // Timer
-            Lesson44();
+            //Lesson44();
+            // Math
+            Lesson45();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -368,6 +370,23 @@ namespace ConsoleApplication
             while (value < 5) // 5 seconds
                 Console.WriteLine(value);
             timer.Stop();
+        }
+
+        // Math
+        static void Lesson45()
+        {
+            double firstValue = -40, secondValue = 3;
+            Console.WriteLine(Math.Min(firstValue, secondValue));
+            Console.WriteLine(Math.Max(firstValue, secondValue));
+            Console.WriteLine(Math.Abs(firstValue));
+            Console.WriteLine(Math.Sign(firstValue));
+            Console.WriteLine(Math.Sin(secondValue));
+            Console.WriteLine(Math.Cos(secondValue));
+            Console.WriteLine(Math.Pow(firstValue, secondValue));
+            Console.WriteLine(Math.Sqrt(secondValue));
+            Console.WriteLine(Math.Log(secondValue));
+            Console.WriteLine(Math.Log10(secondValue));
+            Console.WriteLine(Math.Exp(secondValue));
         }
     }
 }
