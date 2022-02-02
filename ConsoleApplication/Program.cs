@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System;
 
 namespace ConsoleApplication
 {
@@ -27,7 +28,9 @@ namespace ConsoleApplication
             // Jump statements
             //Lesson37();
             // Arrays
-            Lesson39();
+            //Lesson39();
+            // List
+            Lesson42();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -295,6 +298,32 @@ namespace ConsoleApplication
             int[] numbers2 = new int[4] { 3, 4, 5, 6 };
             int[] numbers3 = new int[] { 3, 4, 5, 6 };
             int[] numbers4 = { 3, 4, 5, 6 };
+        }
+
+        // List
+        static void Lesson42()
+        {
+            List<int> numbers = new List<int>();
+
+            void show()
+            {
+                foreach (var number in numbers)
+                    Console.WriteLine(number);
+                Console.WriteLine();
+            }
+
+            numbers.Add(1);
+            show();
+
+            numbers.AddRange(new List<int>{ 2, 3 });
+            show();
+
+            numbers.Clear();
+            numbers.Add(4);
+            show();
+
+            numbers.Add(numbers.Count);
+            show();
         }
     }
 }
