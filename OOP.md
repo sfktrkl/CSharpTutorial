@@ -129,3 +129,38 @@ A static class can only contain static data members, static methods, and a stati
 It is not allowed to create objects of the static class.
 Static classes are sealed, means one cannot inherit a static class from another class.
 
+# Inheritance
+Inheritance allows us to define a class in terms of another class, which makes it a whole lot easier to create maintain an application.
+Provides an opportunity to reuse the code functionality and speeds up implementation time.
+
+So in creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class.
+This existing class is called the base class, and the new class is referred to as the derived class.
+
+There are four types of inheritance. Single inheritance, hierarchical inheritance, Multi level inheritance, Multiple inheritance.
+
+## Single Inheritance
+The single inheritance is the type of inheritance where there is just one base class and one derived class.
+
+## Hierarchical inheritance
+Is the type of inheritance in which there are multiple classes derived from one base class.
+As you can see in the schema, this type of inheritance is used when there is a requirement of one class feature that is needed in multiple classes.
+
+## Multi-level inheritance
+When you create a derived class which is inherited from an other derived class.
+
+## Multiple inheritance
+One class can have more than one super class and inherit features from all parent classes.
+C# doesn't support. We can achieve multiple inheritance only through interfaces.
+
+## Advantages
+Inheritance reduces code redundancy and provides code reusability.
+Inheritance reduces source code size and improves code readability.
+Easy to manage and it's divided into parent child classes.
+Inheritance supports, code extensibility by overriding the base class functionality within child classes.
+
+## Disadvantages
+In inheritance, the base class and the child classes are tightly coupled.
+Therefore, if you change the code of the parent class, it affects all of the child classes.
+So in the class hierarchy, many data members remain unused and then the memory allocated to them is not utilized.
+So that affects the performance of your program.
+
