@@ -30,7 +30,9 @@ namespace ConsoleApplication
             // Arrays
             //Lesson39();
             // List
-            Lesson42();
+            //Lesson42();
+            // Random
+            Lesson43();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -324,6 +326,27 @@ namespace ConsoleApplication
 
             numbers.Add(numbers.Count);
             show();
+        }
+
+        // Random
+        static void Lesson43()
+        {
+            Random random = new Random();
+            Console.WriteLine(random.Next());
+            Console.WriteLine(random.Next(100));
+            Console.WriteLine(random.Next(100, 200));
+            Console.WriteLine(random.NextDouble());
+
+            byte[] array = new byte[3];
+            random.NextBytes(array);
+            foreach (var b in array)
+                Console.WriteLine(b);
+
+            string valid = "asdfgh12345";
+            string result = "";
+            for (int i = 0; i < 6; i++)
+                result += valid[random.Next(0, valid.Length)];
+            Console.WriteLine(result);
         }
     }
 }
