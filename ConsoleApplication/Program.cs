@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Timers;
 using System;
 
 namespace ConsoleApplication
@@ -32,7 +33,9 @@ namespace ConsoleApplication
             // List
             //Lesson42();
             // Random
-            Lesson43();
+            //Lesson43();
+            // Timer
+            Lesson44();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -347,6 +350,24 @@ namespace ConsoleApplication
             for (int i = 0; i < 6; i++)
                 result += valid[random.Next(0, valid.Length)];
             Console.WriteLine(result);
+        }
+
+        // Timer
+        static void Lesson44()
+        {
+            Timer timer = new Timer();
+            timer.Interval = 1000; // 1 second
+            timer.Enabled = true;
+
+            int value = 0;
+            timer.Start();
+            timer.Elapsed += (sender, e) =>
+            {
+                value++;
+            };
+            while (value < 5) // 5 seconds
+                Console.WriteLine(value);
+            timer.Stop();
         }
     }
 }
