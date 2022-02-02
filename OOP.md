@@ -94,3 +94,38 @@ We can access members inside that containing class or in a class that derives fr
 
 If we try to access it from another assembly, we will get an error.
 
+# Static
+Static is a keyword that can be used to declare a member of a type that is specific to that type.
+So when a member is declared static, it can be accessed with the name of it class directly.
+So this means, for example, without static, if we wanted to use a variable in a class, we would have to create an object first.
+But if we first defined this variable as static, then we can use it with out creating an object.
+
+Static modifier can be used with a variable, method, constructor or class.
+
+## Static variable
+When a variable is declared as static, then a single copy of the variable is created and shared among all objects at the class level.
+Static variables are accessed with the name of the class, they do not require any object for access.
+
+## Static method
+Static methods are accessed with the name of the class.
+A static method can access static and non-static fields, static fields are directly accessed by the static method without class name whereas non-static fields require objects.
+
+## Static constructor
+There are two different types of constructors, instant's and static.
+
+The instance constructor is used to initialize instant's data.
+Instance constructor is called every time when a class object is created, it is called explicitly.
+Instant's constructor takes parameters, it has access specifiers.
+
+Static constructor is used to initialize static data or perform a particular action that needs to be performed only once in the lifecycle of a class.
+The static constructor is the first block of code to execute in class.
+Static constructor executes one and only one time in the lifecycle of class.
+
+And the static constructor does not take any parameter.
+It has no access specifiers and it is not called directly.
+
+## Static class
+A static class can only contain static data members, static methods, and a static constructor.
+It is not allowed to create objects of the static class.
+Static classes are sealed, means one cannot inherit a static class from another class.
+
