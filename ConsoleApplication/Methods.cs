@@ -16,6 +16,23 @@ namespace ConsoleApplication
     // Output parameters are more like a reference type of parameter but don't need initialization.
     // Method overloading allows the creation of several methods with the same name, 
     // which differ from each other in the type of input.
+
+    // The created methods and the properties are contained 
+    // within a class and we can always reuse a class.
+    // Both functions and data are closely linked at the same time.
+    // Class must contain a number of members for the objects to be created in.
+    // Class defines the operations and properties associated with the status of the objects.
+    // Data and procedures for objects with common properties are collected in a class.
+    // Classes support polymorphism, inheritance and also provides the concept of 
+    // derived classes as well as base classes.
+    // A field has to be declared in a type class war structure with 
+    // its data type and an identifier that names the member.
+    // Properties are the special type of class members that provides a flexible 
+    // mechanism in order to read and write or compute the value of a private field,
+    // properties can be used as if they are public data members, but they are
+    // actually special methods called accessors.
+    // Encapsulation and the hiding of information can also be achieved using properties,
+    // so it uses predefined methods which are get and set.
     class Methods
     {
         public bool visible = true;
