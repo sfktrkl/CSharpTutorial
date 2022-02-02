@@ -48,3 +48,49 @@ However, in some cases, developers need to take extra actions when objects are b
 So in dot net, there is no concept of deterministic distructors.
 The garbage collector will call the finalize method at a non-deterministic time while reclaiming memory for the application.
 
+# What is encapsulation?
+Encapsulation is an object oriented, programming based concept, encapsulation means protect important data inside the class, which we don't want exposed outside of the class.
+Encapsulation is a process that binds the data members and member functions into a single unit.
+Class is one of the best examples of encapsulation.
+
+## Why do we need encapsulation?
+Encapsulation complements abstraction.
+Encapsulation hides private or unwanted data from outside the class. Unwanted means other classes and assemblies.
+
+So an abstraction displays only the important features of a class.
+With encapsulation, we can make variables, properties and methods private.
+So it is not accessible to all, but accessible through the proper channels, only to protect it from the accidental corruption from the other classes.
+
+We make encapsulation with access modifiers formally, there were five types of access modifiers. But with C# version 7.2, there are six access modifiers.
+private, public, protected, internal, protected internal, private protected.
+
+### private
+With private, the scope of the accessibility is limited only inside the classes or structure in which they are declared.
+The private members cannot be accessed outside the class and it is the least permissive access level.
+
+In C# for variables default access, modifier values is private.
+If you don't give any access, modifier to a variable.
+
+### public
+Public is the most common access specifiers in C#. It can be accessed from anywhere.
+That means there is no restriction on accessibility. The scope of the accessibility is inside the class as well as outside.
+Can be accessed by any other code in the same assembly or any other assembly that references it.
+
+### protected
+Protected is useful when you want your class and all the derived child classes to be able to access a method or variable, but you don't want it to be public.
+
+### internal
+The internal access specifier hides its member variables and methods from other classes and objects that resides in other namespace.
+The variable or classes that are declared with internal can be accessed by any member within an application.
+Internal is the default access specified for a class in C# program.
+
+### protected internal
+The protected internal access modifier is a combination of protected and internal. 
+As a result we can access the protected internal member only in the same assembly or in a derived class in other projects.
+
+### private protected
+The private protected access modifier is a combination of the private and protected keywords.
+We can access members inside that containing class or in a class that derives from a containing class, but only in the same project.
+
+If we try to access it from another assembly, we will get an error.
+
