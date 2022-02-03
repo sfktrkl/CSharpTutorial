@@ -37,7 +37,9 @@ namespace ConsoleApplication
             // Timer
             //Lesson44();
             // Math
-            Lesson45();
+            //Lesson45();
+            // Enum
+            Lesson56();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -387,6 +389,31 @@ namespace ConsoleApplication
             Console.WriteLine(Math.Log(secondValue));
             Console.WriteLine(Math.Log10(secondValue));
             Console.WriteLine(Math.Exp(secondValue));
+        }
+
+        // Enum
+        // Enum is a value data type in C#. They are basically a set of named constants.
+        // It is mainly used to assign the names or string values to integer constants that make a program easy to read and maintain.
+        // The enum can include named constants of numeric data types, which are like byte sbyte, short, ushort, int, long, ulong.
+        // Mainly used to make code more readable by giving related constants a meaningful name, improves maintainability.
+        // It has methods, GetName
+        enum Colors
+        {
+            red,        // 0
+            blue,       // 1
+            white = 5,  // 5
+            black = 5, // 5
+            yellow,     // 6
+            purple,     // 7
+        }
+        static void Lesson56()
+        {
+            Console.WriteLine((int)Colors.red + " " + Enum.GetName(typeof(Colors), Colors.red));
+            Console.WriteLine((int)Colors.blue + " " + Enum.GetName(typeof(Colors), Colors.blue));
+            Console.WriteLine((int)Colors.white + " " + Enum.GetName(typeof(Colors), Colors.white));
+            Console.WriteLine((int)Colors.black + " " + Enum.GetName(typeof(Colors), Colors.black));
+            Console.WriteLine((int)Colors.yellow + " " + Enum.GetName(typeof(Colors), Colors.yellow));
+            Console.WriteLine((int)Colors.purple + " " + Enum.GetName(typeof(Colors), Colors.purple));
         }
     }
 }
