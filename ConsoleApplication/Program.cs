@@ -41,7 +41,9 @@ namespace ConsoleApplication
             // Enum
             // Lesson56();
             // Delegates
-            Lesson57();
+            //Lesson57();
+            // Exception handling
+            Lesson58();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -455,6 +457,33 @@ namespace ConsoleApplication
         static void Lesson57()
         {
             Delegates.Run();
+        }
+
+        // Exception handling
+        // So exception handling is C# is a process to handle runtime errors.
+        // We perform exception handling so that the normal flow of the application can be maintained even after runtime errors.
+        // An exception is an event or an object which is thrown at runtime. So it's a runtime error which can be handled.
+        // Now, if we don't handle the exception, it prints the exception message and then terminates the program.
+        // So it maintains the normal flow of the application. So in that case, the rest of the code is executed after an event exception.
+        // So exceptions allow an application to transfer control from one part of the code to another.
+        // So when an exception is thrown, the current flow, the code is interrupted and then handed back to a parent.
+        static void Lesson58()
+        {
+            int x = 0, y = 5;
+            float result;
+            try
+            {
+                result = y / x;
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Console.WriteLine("finally");
+                throw new Exception("exception");
+            }
         }
     }
 }
