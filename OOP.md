@@ -164,3 +164,14 @@ Therefore, if you change the code of the parent class, it affects all of the chi
 So in the class hierarchy, many data members remain unused and then the memory allocated to them is not utilized.
 So that affects the performance of your program.
 
+# Interface
+Interface will contain only the declarations of the methods properties, an event that a class or struct can implement.
+The class or struct that implements an interface must provide an implementation for all the members that are specified in the interface definition.
+C# will not support multiple inheritance of classes, but that can be achieved by using the interface.
+
+In C#, an interface cannot be instantiated directly, but it can be instantiated by a class or a struct that implements an interface.
+
+And by default, the members of the interface are public and we're not allowed to include any other access modifiers.
+
+In C Sharp, an interface can contain methods, properties, events, indexers, but it cannot contain constants, fields, operators, instance constructors, finalizers or types.
+
