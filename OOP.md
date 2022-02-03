@@ -175,3 +175,28 @@ And by default, the members of the interface are public and we're not allowed to
 
 In C Sharp, an interface can contain methods, properties, events, indexers, but it cannot contain constants, fields, operators, instance constructors, finalizers or types.
 
+# Polymorphism
+In C# polymorphism means providing an ability to take more than one form.
+Polymorphism provides an ability for the classes to implement different methods that are called the same name.
+It provides an ability to invoke the method of derived classes through the base class reference during runtime based on our requirements.
+
+So there are two types of polymorphism in C#, compile time polymorphism and runtime polymorphism.
+
+## Compile time polymorphism
+Compile time polymorphism is achieved by method overloading and operator overloading in C#.
+It's also known as static binding or early binding.
+
+Means defining multiple methods with the same name, but with different parameters.
+By using the compile time polymorphism, we can perform different tasks with the same method name. But passing different parameters.
+That's why the process is called overloading.
+
+## Runtime polymorphism
+Runtime polymorphism is achieved by method overwriting, which is also known as dynamic binding or late binding.
+
+A virtual method is a method that can be redefined in derived classes.
+A virtual method has an implementation in a base class as well as the derived class.
+It's used when a methods, basic functionality is the same, but sometimes more functionality will be needed in the derived class.
+
+So when a method is declared as a virtual method in a base class, then that method can be defined in a base class and it is optional for the derived class to override that method.
+So the overriding method also provides more than one form for a method, and it is also an example of polymorphism.
+
