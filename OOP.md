@@ -225,3 +225,26 @@ Classes can either be public or internal, you know, but a nested class may be de
 Nested class may also be declared as protected, allowing it to also be accessed by classes that derive from its parent type.
 And this may be extended to protected internal to allow other classes in the same assembly to access it.
 
+# Partial Class
+Now, partial class is indeed a special feature of C#. It provides a special ability to implement the functionality of a single class into multiple files.
+Then all these files are combined into a single class file when the application is compiled.
+So this keyword is also useful to split the functionality of methods, interfaces or structured into multiple files.
+
+Every part of the partial class definition should be the same assembly and namespace. But you can use different source file names.
+So every part of the partial class definition should have the same accessibility, like private or protected.
+So if any part of the partial class is declared as an abstract, sealed or base, then a whole class is declared to be that same time.
+
+## Advantages
+Multiple developers can work simultaneously on the same class in different files.
+With the help of the partial class concept, you can split the UI of the design code and the business logic code in order to read and understand the code.
+Maintain your application in an efficient manner by compressing large classes into smaller ones.
+
+# Sealed Class
+Sealed classes are used to restrict the users from inheriting the class. Therefore cannot be extended and no class can be derived from a sealed class.
+So a sealed class is used to stop a class from being inherited.
+
+Now, a method can also be sealed, in that case, the method cannot be overridden.
+However, a method can be sealed in the classes in which they have been inherited.
+
+Sealed classes are best used when you have a class with static members.
+
