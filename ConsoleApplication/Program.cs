@@ -39,7 +39,9 @@ namespace ConsoleApplication
             // Math
             //Lesson45();
             // Enum
-            Lesson56();
+            // Lesson56();
+            // Delegates
+            Lesson57();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -414,6 +416,45 @@ namespace ConsoleApplication
             Console.WriteLine((int)Colors.black + " " + Enum.GetName(typeof(Colors), Colors.black));
             Console.WriteLine((int)Colors.yellow + " " + Enum.GetName(typeof(Colors), Colors.yellow));
             Console.WriteLine((int)Colors.purple + " " + Enum.GetName(typeof(Colors), Colors.purple));
+        }
+
+        // Delegates
+        // A delegate is like a pointer to a function.
+        // It is a reference type data type. It holds the reference of a method.
+        // You can only use delegate for when you have the same return type and parameters.
+        // The delegate can point to multiple methods as well. Delegate that points to multiple methods is called a multicast delegate.
+        static class Delegates
+        {
+            private static string text;
+
+            public delegate void Fill();
+
+            private static void FillText()
+            {
+                text += "Filled";
+            }
+
+            private static void FillTextAgain()
+            {
+                text += "Again";
+            }
+
+            public static void Run()
+            {
+                Fill fill = FillText;
+                fill();
+                fill.Invoke();
+
+                fill += FillTextAgain;
+                fill();
+                fill.Invoke();
+
+                Console.WriteLine(text);
+            }
+        }
+        static void Lesson57()
+        {
+            Delegates.Run();
         }
     }
 }
