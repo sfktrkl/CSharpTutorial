@@ -200,3 +200,17 @@ It's used when a methods, basic functionality is the same, but sometimes more fu
 So when a method is declared as a virtual method in a base class, then that method can be defined in a base class and it is optional for the derived class to override that method.
 So the overriding method also provides more than one form for a method, and it is also an example of polymorphism.
 
+# Abstract
+So an abstract class is a special type of class, it cannot be instantiated and abstract class is designed to be inherited by subclasses that either implement or override its methods.
+Abstract classes are either partially implemented or not implemented at all. The methods in an abstract class can be both abstract and concrete.
+An abstract class can have constructors. And this is one major difference between an abstract class and an interface.
+So you can take advantage of abstract classes so that you can design components and specify a certain level of common functionality that must be implemented by derived classes.
+
+You cannot create an instance of an abstract class.
+An abstract class can inherit from a class and one or more interfaces.
+Also, an abstract class can implement code with non abstract methods.
+
+So an abstract class can have modifiers for methods, properties, constants, fields, constructors or destructors.
+An abstract class can also implement a property. But abstract classes cannot be inherited from structures and cannot support multiple inheritances.
+
+Now, the other thing to keep in mind with the abstract method very important here, that if we have an abstract method in a base class, we have to override this method in a derived class.
