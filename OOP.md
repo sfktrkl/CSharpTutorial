@@ -214,3 +214,14 @@ So an abstract class can have modifiers for methods, properties, constants, fiel
 An abstract class can also implement a property. But abstract classes cannot be inherited from structures and cannot support multiple inheritances.
 
 Now, the other thing to keep in mind with the abstract method very important here, that if we have an abstract method in a base class, we have to override this method in a derived class.
+
+# Nested Class
+Normally classes are declared within a namespace. Or in the default namespace, if one's not specified.
+
+A nested class is defined within the code block of another class, which itself may be a nested class to permit multiple nesting levels unless the class generally behaves in the same way as any other class.
+It can be instantiated separately to its parent class. And it is not instantiated automatically by its parent.
+
+Classes can either be public or internal, you know, but a nested class may be declared as private, meaning that the class can only be seen by its parent class and other nested classes within that parent.
+Nested class may also be declared as protected, allowing it to also be accessed by classes that derive from its parent type.
+And this may be extended to protected internal to allow other classes in the same assembly to access it.
+
