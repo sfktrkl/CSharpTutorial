@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Timers;
+using System.IO;
 using System;
 
 namespace ConsoleApplication
@@ -43,7 +44,9 @@ namespace ConsoleApplication
             // Delegates
             //Lesson57();
             // Exception handling
-            Lesson58();
+            //Lesson58();
+            // Directory and Directory Classes (Folder Operations)
+            Lesson60();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -484,6 +487,38 @@ namespace ConsoleApplication
                 Console.WriteLine("finally");
                 throw new Exception("exception");
             }
+        }
+
+        // Directory and Directory Classes(Folder Operations)
+        static void Lesson60()
+        {
+            // Create a new folder
+            if (!Directory.Exists(@"firstfolder"))
+                Directory.CreateDirectory(@"firstfolder");
+
+            if (!Directory.Exists(@"secondfolder"))
+            {
+                DirectoryInfo directory = new DirectoryInfo(@"secondfolder");
+                directory.Create();
+
+                // Directory info
+                Console.WriteLine(directory.LastAccessTime);
+                Console.WriteLine(directory.CreationTime);
+            }
+
+            // Move the folder
+            if (Directory.Exists(@"firstfolder") && !Directory.Exists(@"F:\firstfolder"))
+                Directory.Move(@"firstfolder", @"F:\firstfolder");
+
+            // Delete the folder
+            if (Directory.Exists(@"firstfolder"))
+                Directory.Delete(@"firstfolder");
+
+            if (Directory.Exists(@"secondfolder"))
+                Directory.Delete(@"secondfolder");
+
+            if (Directory.Exists(@"F:\firstfolder"))
+                Directory.Delete(@"F:\firstfolder");
         }
     }
 }
