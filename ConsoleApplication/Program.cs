@@ -48,7 +48,9 @@ namespace ConsoleApplication
             // Directory and Directory Classes (Folder Operations)
             //Lesson60();
             // File and File Info Classes (File Operations)
-            Lesson61();
+            //Lesson61();
+            // Path
+            Lesson62();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -578,6 +580,25 @@ namespace ConsoleApplication
 
             if (File.Exists("thirdfile"))
                 File.Delete("thirdfile");
+        }
+
+        // Path
+        static void Lesson62()
+        {
+            var name = "firstfile.tutorial";
+            if (!File.Exists(name))
+                File.Create(name);
+
+            Console.WriteLine(Path.GetDirectoryName(name));
+            Console.WriteLine(Path.GetExtension(name));
+            Console.WriteLine(Path.GetFileName(name));
+            Console.WriteLine(Path.GetFileNameWithoutExtension(name));
+            Console.WriteLine(Path.GetFullPath(name));
+            Console.WriteLine(Path.GetTempPath());
+            Console.WriteLine(Path.GetTempFileName());
+
+            if (File.Exists(name))
+                File.Delete(name);
         }
     }
 }
