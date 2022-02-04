@@ -46,7 +46,9 @@ namespace ConsoleApplication
             // Exception handling
             //Lesson58();
             // Directory and Directory Classes (Folder Operations)
-            Lesson60();
+            //Lesson60();
+            // File and File Info Classes (File Operations)
+            Lesson61();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -519,6 +521,63 @@ namespace ConsoleApplication
 
             if (Directory.Exists(@"F:\firstfolder"))
                 Directory.Delete(@"F:\firstfolder");
+        }
+
+        // File and File Info Classes(File Operations)
+        static void Lesson61()
+        {
+            // Stream
+            // FileStream       : reads writes bytes from or to a physical file
+            // MemoryStream     : reads writes bytes that are stored in the memory
+            // BufferedStream   : reads writes bytes from others streams to improve the performance of certain IO operations
+            // NetworkStream    : reads writes bytes from a network socket
+            // PipeStream       : reads writes bytes from different processes
+            // CryptoStream     : linking data streams to cryptographic transformations
+
+            // Readers and Writers
+            // StreamReader : helper class for reading characters from a stream
+            // StreamWriter : writing a string to a stream by converting characters into bytes
+            // BinaryReader : reading primitive data times from bytes
+            // BinaryWriter : binary writer writes primitive types in binary
+
+            if (!File.Exists("firstfile"))
+                File.Create("firstfile");
+
+            if (!File.Exists("secondfile"))
+            {
+                FileInfo file = new FileInfo("secondfile");
+                file.Create();
+
+                Console.WriteLine(file.LastAccessTime);
+                Console.WriteLine(file.CreationTime);
+            }
+
+            FileStream fs = new FileStream("firstfile", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.WriteLine("firstline");
+            sw.WriteLine("secondline");
+            sw.Flush();
+            sw.Close();
+            fs.Close();
+
+            FileStream fs2 = new FileStream("firstfile", FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fs2);
+            string text = "";
+            while (!sr.EndOfStream)
+                text += sr.ReadLine() + Environment.NewLine;
+            sr.Close();
+            fs2.Close();
+
+            File.Copy("firstfile", "thirdfile");
+
+            if (File.Exists("firstfile"))
+                File.Delete("firstfile");
+
+            if (File.Exists("secondfile"))
+                File.Delete("secondfile");
+
+            if (File.Exists("thirdfile"))
+                File.Delete("thirdfile");
         }
     }
 }
