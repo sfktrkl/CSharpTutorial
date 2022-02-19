@@ -52,7 +52,9 @@ namespace ConsoleApplication
             // Path
             //Lesson62();
             // Abstract Factory Pattern
-            Lesson117();
+            //Lesson117();
+            // Observer Pattern
+            Lesson118();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -625,6 +627,18 @@ namespace ConsoleApplication
             Console.WriteLine("");
             Console.WriteLine(factory.CreateBurger().GetType().Name);
             Console.WriteLine(factory.CreateDessert().GetType().Name);
+        }
+
+        // Observer Pattern
+        static void Lesson118()
+        {
+            ObserverPattern.Chocolate chocolate = new ObserverPattern.Chocolate(2);
+            chocolate.Attach(new ObserverPattern.Market("Market1", 1));
+            chocolate.Attach(new ObserverPattern.Market("Market2", 2));
+            chocolate.Attach(new ObserverPattern.Market("Market3", 3));
+            chocolate.PricePerPound = 4;
+            chocolate.PricePerPound = 5;
+            chocolate.PricePerPound = 6;
         }
     }
 }
