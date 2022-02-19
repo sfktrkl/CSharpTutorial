@@ -54,7 +54,9 @@ namespace ConsoleApplication
             // Abstract Factory Pattern
             //Lesson117();
             // Observer Pattern
-            Lesson118();
+            //Lesson118();
+            // Facade Pattern
+            Lesson119();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -639,6 +641,14 @@ namespace ConsoleApplication
             chocolate.PricePerPound = 4;
             chocolate.PricePerPound = 5;
             chocolate.PricePerPound = 6;
+        }
+
+        // Facade Pattern
+        static void Lesson119()
+        {
+            FacadePattern.ShapeMaker shapeMaker = new FacadePattern.ShapeMaker();
+            shapeMaker.DrawRectangle();
+            shapeMaker.DrawSquare();
         }
     }
 }
