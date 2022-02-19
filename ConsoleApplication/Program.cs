@@ -50,7 +50,9 @@ namespace ConsoleApplication
             // File and File Info Classes (File Operations)
             //Lesson61();
             // Path
-            Lesson62();
+            //Lesson62();
+            // Abstract Factory Pattern
+            Lesson117();
         }
 
         // Functions Used in Console Environment to Write and Read
@@ -599,6 +601,30 @@ namespace ConsoleApplication
 
             if (File.Exists(name))
                 File.Delete(name);
+        }
+
+        // Abstract Factory Pattern
+        static void Lesson117()
+        {
+            Console.WriteLine("Kid or Adult? K - A");
+            char result = Console.ReadKey().KeyChar;
+            AbstractFactoryPattern.RecipeFactory factory;
+            switch (result)
+            {
+                case 'A':
+                    factory = new AbstractFactoryPattern.AdultCuisineFactory();
+                    break;
+                case 'K':
+                    factory = new AbstractFactoryPattern.KidCuisineFactory();
+                    break;
+                default:
+                    factory = new AbstractFactoryPattern.AdultCuisineFactory();
+                    break;
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine(factory.CreateBurger().GetType().Name);
+            Console.WriteLine(factory.CreateDessert().GetType().Name);
         }
     }
 }
